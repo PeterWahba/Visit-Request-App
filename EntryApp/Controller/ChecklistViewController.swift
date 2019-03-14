@@ -11,14 +11,28 @@ import Alamofire
 import SwiftyJSON
 
 //Constants
+
 let REQUESTS_URL = "http://localhost:5000/api/requests"
+let defaults = UserDefaults.standard
 
 
 class ChecklistViewController: UITableViewController {
 
   var todoList: TodoList
   
-  @IBAction func addItem(_ sender: Any) {
+    @IBAction func logoutBtn(_ sender: Any) {
+        do {
+            defaults.set(false, forKey: "isLoggedIn")
+            defaults.set(nil, forKey: "userToken")
+
+            navigationController?.popToRootViewController(animated: true)
+            
+        }
+        catch {
+            print("error: there was a problem logging out")
+        }
+    }
+    @IBAction func addItem(_ sender: Any) {
     
     let newRowIndex = todoList.todos.count
     _ = todoList.newTodo()
@@ -47,7 +61,8 @@ class ChecklistViewController: UITableViewController {
     
 //  Get Requests Data
     func getRequestsData (url: String) {
-        Alamofire.request(url, method: .get).responseJSON {
+        let HTTPHeaders : [String:String] = ["x-auth-token": defaults.value(forKey: "userToken") as! String]
+        Alamofire.request(url, method: .get,headers: HTTPHeaders).responseJSON {
             response in
             if response.result.isSuccess {
                 print("Success !, Got the request data")
@@ -63,8 +78,10 @@ class ChecklistViewController: UITableViewController {
     
     //  Delete Requests Data
     func deleteRequestsData (url: String) {
+              let HTTPHeaders : [String:String] = ["x-auth-token": defaults.value(forKey: "userToken") as! String]
+        
         print("url to delete \(url)")
-        Alamofire.request(url, method: .delete).responseJSON {
+        Alamofire.request(url, method: .delete,headers: HTTPHeaders).responseJSON {
             response in
             if response.result.isSuccess {
                 print("Success !, Delete the request")

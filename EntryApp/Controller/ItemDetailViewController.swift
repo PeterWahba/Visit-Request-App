@@ -25,27 +25,28 @@ class ItemDetailViewController: UITableViewController {
   @IBOutlet weak var cancelBarButton: UIBarButtonItem!
   @IBOutlet weak var addBarButton: UIBarButtonItem!
   @IBOutlet weak var titleTextField: UITextField!
-  @IBOutlet weak var descTextField: UITextField!
+//  @IBOutlet weak var descTextField: UITextField!
     
-  @IBAction func cancel(_ sender: Any) {
+    @IBOutlet weak var detailsTextField: UITextField!
+    @IBAction func cancel(_ sender: Any) {
     delegate?.itemDetailViewControllerDidCancel(self)
   }
   
   @IBAction func done(_ sender: Any) {
     if let item = itemToEdit,
        let textTitle = titleTextField.text,
-       let textDescription = descTextField.text {
+       let textDescription = detailsTextField.text {
       item.requestTitle = textTitle
       item.requestDescription = textDescription
         print("item is : \(item.requestID)")
-        let param : [String : String] = ["title": titleTextField.text! ,"description" : descTextField.text! ]
+        let param : [String : String] = ["title": titleTextField.text! ,"description" : detailsTextField.text! ]
         let edit_url = "http://localhost:5000/api/requests/\(item.requestID)"
-editRequestsData(url: edit_url, parametersss: param)
+        editRequestsData(url: edit_url, parametersss: param)
       delegate?.itemDetailViewController(self, didFinishEditing: item)
     } else {
       if let item = todoList?.newTodo() {
         if let textFieldText = titleTextField.text,
-            let textDescription = descTextField.text {
+            let textDescription = detailsTextField.text {
             item.requestTitle = textFieldText
             item.requestDescription = textDescription
             
@@ -64,6 +65,7 @@ editRequestsData(url: edit_url, parametersss: param)
     if let item = itemToEdit {
       title = "Edit Item"
       titleTextField.text = item.requestTitle
+        detailsTextField.text = item.requestDescription
       addBarButton.isEnabled = true
     }
     navigationItem.largeTitleDisplayMode = .never
@@ -74,7 +76,8 @@ editRequestsData(url: edit_url, parametersss: param)
     
     //  New Requests Data
     func newRequestsData (url: String, parametersss: [String : String]) {
-        Alamofire.request(url, method: .post, parameters: parametersss).responseJSON {
+            let HTTPHeaders : [String:String] = ["x-auth-token": defaults.value(forKey: "userToken") as! String]
+        Alamofire.request(url, method: .post, parameters: parametersss,headers: HTTPHeaders).responseJSON {
             response in
             if response.result.isSuccess {
                 print("Success !, New the request data")
@@ -89,7 +92,9 @@ editRequestsData(url: edit_url, parametersss: param)
     
     //  Edit Requests Data
     func editRequestsData (url: String, parametersss: [String : String]) {
-        Alamofire.request(url, method: .put, parameters: parametersss).responseJSON {
+            let HTTPHeaders : [String:String] = ["x-auth-token": defaults.value(forKey: "userToken") as! String]
+        
+        Alamofire.request(url, method: .put, parameters: parametersss, headers: HTTPHeaders).responseJSON {
             response in
             if response.result.isSuccess {
                 print("Success !, Edit the request data")

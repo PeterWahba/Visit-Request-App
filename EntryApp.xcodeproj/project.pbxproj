@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D88C89D47F49953D7832DB6 /* Pods_EntryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E47632010CC5A29BABE0895 /* Pods_EntryApp.framework */; };
+		A3667F012231118100AA95AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F002231118100AA95AE /* LoginViewController.swift */; };
+		A3667F03223134E900AA95AE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F02223134E900AA95AE /* SignupViewController.swift */; };
+		A3667F0722314DEF00AA95AE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */; };
 		D304576A20D84DDA001DBE8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304576920D84DDA001DBE8E /* AppDelegate.swift */; };
 		D304576C20D84DDA001DBE8E /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304576B20D84DDA001DBE8E /* ChecklistViewController.swift */; };
 		D304576F20D84DDA001DBE8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304576D20D84DDA001DBE8E /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		18E80842BB5EAFCF0E423C90 /* Pods-EntryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntryApp.debug.xcconfig"; path = "Target Support Files/Pods-EntryApp/Pods-EntryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3E47632010CC5A29BABE0895 /* Pods_EntryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3667F002231118100AA95AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A3667F02223134E900AA95AE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = /Users/petermounir/Desktop/MAC/_get/_EntryApp/EntryApp/Controller/WelcomeViewController.swift; sourceTree = "<absolute>"; };
 		D304576620D84DDA001DBE8E /* EntryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304576920D84DDA001DBE8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D304576B20D84DDA001DBE8E /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +59,6 @@
 				18E80842BB5EAFCF0E423C90 /* Pods-EntryApp.debug.xcconfig */,
 				F6EE6AC069B6BDE2643B1D2D /* Pods-EntryApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +90,9 @@
 		A3B2EEDD2227D32400DE79F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */,
+				A3667F02223134E900AA95AE /* SignupViewController.swift */,
+				A3667F002231118100AA95AE /* LoginViewController.swift */,
 				D304576B20D84DDA001DBE8E /* ChecklistViewController.swift */,
 				D363D79520D9BCB2006BB465 /* ItemDetailViewController.swift */,
 				D304576920D84DDA001DBE8E /* AppDelegate.swift */,
@@ -256,6 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3667F012231118100AA95AE /* LoginViewController.swift in Sources */,
+				A3667F0722314DEF00AA95AE /* WelcomeViewController.swift in Sources */,
+				A3667F03223134E900AA95AE /* SignupViewController.swift in Sources */,
 				D304576C20D84DDA001DBE8E /* ChecklistViewController.swift in Sources */,
 				D363D79620D9BCB2006BB465 /* ItemDetailViewController.swift in Sources */,
 				D3664B1320D97C280085AB15 /* ChecklistItem.swift in Sources */,
