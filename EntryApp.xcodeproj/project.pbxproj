@@ -11,6 +11,9 @@
 		A3667F012231118100AA95AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F002231118100AA95AE /* LoginViewController.swift */; };
 		A3667F03223134E900AA95AE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F02223134E900AA95AE /* SignupViewController.swift */; };
 		A3667F0722314DEF00AA95AE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */; };
+		A3971B0622423EF500552C61 /* getlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3971B0522423EF500552C61 /* getlogo.png */; };
+		A3971B0C22424AC700552C61 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3971B0A22424AC700552C61 /* logo.png */; };
+		A3971B0D22424AC700552C61 /* logo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A3971B0B22424AC700552C61 /* logo_transparent.png */; };
 		D304576A20D84DDA001DBE8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304576920D84DDA001DBE8E /* AppDelegate.swift */; };
 		D304576C20D84DDA001DBE8E /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304576B20D84DDA001DBE8E /* ChecklistViewController.swift */; };
 		D304576F20D84DDA001DBE8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304576D20D84DDA001DBE8E /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 		A3667F002231118100AA95AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A3667F02223134E900AA95AE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = /Users/petermounir/Desktop/MAC/_get/_EntryApp/EntryApp/Controller/WelcomeViewController.swift; sourceTree = "<absolute>"; };
+		A3971B0522423EF500552C61 /* getlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getlogo.png; sourceTree = "<group>"; };
+		A3971B0A22424AC700552C61 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../Downloads/LOGOS/logo.png; sourceTree = "<group>"; };
+		A3971B0B22424AC700552C61 /* logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_transparent.png; sourceTree = "<group>"; };
 		D304576620D84DDA001DBE8E /* EntryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304576920D84DDA001DBE8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D304576B20D84DDA001DBE8E /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,16 @@
 				3E47632010CC5A29BABE0895 /* Pods_EntryApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3971B0722423EFC00552C61 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A3971B0B22424AC700552C61 /* logo_transparent.png */,
+				A3971B0A22424AC700552C61 /* logo.png */,
+				A3971B0522423EF500552C61 /* getlogo.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		A3B2EEDA2227D2B000DE79F4 /* Model */ = {
@@ -113,6 +129,7 @@
 		D304575D20D84DDA001DBE8E = {
 			isa = PBXGroup;
 			children = (
+				A3971B0722423EFC00552C61 /* images */,
 				D304576820D84DDA001DBE8E /* EntryApp */,
 				D304576720D84DDA001DBE8E /* Products */,
 				53F5FF8C01C79AA4E96D4319 /* Pods */,
@@ -200,6 +217,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3971B0622423EF500552C61 /* getlogo.png in Resources */,
+				A3971B0D22424AC700552C61 /* logo_transparent.png in Resources */,
+				A3971B0C22424AC700552C61 /* logo.png in Resources */,
 				D304577420D84DDA001DBE8E /* LaunchScreen.storyboard in Resources */,
 				D304577120D84DDA001DBE8E /* Assets.xcassets in Resources */,
 				D304576F20D84DDA001DBE8E /* Main.storyboard in Resources */,
