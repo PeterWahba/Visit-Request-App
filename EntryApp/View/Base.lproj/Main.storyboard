@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="pnI-h9-hiA">
             <objects>
-                <tabBarController id="lo7-o3-MKp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarvc" id="lo7-o3-MKp" customClass="TabBarVC" customModule="EntryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9ey-Oj-Dv0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2fu-Bp-jDW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -235,7 +235,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="N22-lq-DQO">
             <objects>
-                <viewController id="1oc-fK-zEg" customClass="WelcomeViewController" customModule="EntryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomevc" id="1oc-fK-zEg" customClass="WelcomeViewController" customModule="EntryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7Y-yg-iGB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,9 +284,6 @@
                         <viewLayoutGuide key="safeArea" id="wLb-Ya-Our"/>
                     </view>
                     <navigationItem key="navigationItem" id="MOR-7Z-ivS"/>
-                    <connections>
-                        <segue destination="lo7-o3-MKp" kind="showDetail" identifier="goToList" id="6dK-CQ-hfB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJX-Du-Tel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,7 +407,6 @@
                     <connections>
                         <outlet property="userEmailTextField" destination="pJG-vO-abf" id="Dq9-2X-knx"/>
                         <outlet property="userPasswordTextField" destination="I0E-ic-1eB" id="Nx3-wT-YrX"/>
-                        <segue destination="lo7-o3-MKp" kind="showDetail" identifier="fromloginToList" id="gV6-7f-zUM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdJ-oc-ax3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -562,7 +558,6 @@
                         <outlet property="userEmailTextField" destination="p6I-qv-82k" id="uwF-wj-k6O"/>
                         <outlet property="userNameTextField" destination="Ln8-Uy-lLc" id="AIb-LL-vla"/>
                         <outlet property="userPasswordTextField" destination="2bg-WF-xMg" id="iKe-zv-Q4q"/>
-                        <segue destination="lo7-o3-MKp" kind="showDetail" identifier="fromsignupToList" id="WYV-zH-n7R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMA-uL-aZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -590,7 +585,6 @@
         <!--Home-->
         <scene sceneID="zYo-3D-dOD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mOW-ap-Edp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xqy-Za-TZy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home-50" selectedImage="home-50" id="k0g-Ua-RLa"/>
                     <toolbarItems/>
@@ -603,6 +597,7 @@
                         <segue destination="ewa-4u-uF2" kind="relationship" relationship="rootViewController" id="Vf3-os-I1S"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOW-ap-Edp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3477.5999999999999" y="95.802098950524751"/>
         </scene>
@@ -615,6 +610,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Kvv-mz-wJD"/>
-        <segue reference="WYV-zH-n7R"/>
     </inferredMetricsTieBreakers>
 </document>

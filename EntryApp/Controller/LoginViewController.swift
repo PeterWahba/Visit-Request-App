@@ -64,7 +64,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 print("User Data : \(requestJSON)")
                 self.defaults.set(userToken.stringValue, forKey: "userToken")
                 self.defaults.set(true, forKey: "isLoggedIn")
-                self.goToList()
+                //                MARK:- Goto save token got to tab bar page
+                Switcher.updateRootVC()
             }
         }
     }
@@ -78,11 +79,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
-    }
-    
-    func goToList()  {
-        performSegue(withIdentifier: "fromloginToList", sender: self)
-
     }
     
     

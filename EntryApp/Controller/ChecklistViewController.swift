@@ -25,7 +25,7 @@ class ChecklistViewController: UITableViewController {
             defaults.set(false, forKey: "isLoggedIn")
             defaults.set(nil, forKey: "userToken")
 
-            navigationController?.popToRootViewController(animated: true)
+            Switcher.updateRootVC()
             
         }
         catch {

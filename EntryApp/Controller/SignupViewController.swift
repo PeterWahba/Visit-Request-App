@@ -47,7 +47,7 @@ class SignupViewController: UIViewController {
             response in
             
             switch response.result {
-            case .failure(let _):
+            case .failure( _):
                 
                 if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
                     print(responseString)
@@ -61,18 +61,13 @@ class SignupViewController: UIViewController {
                                 print(responseObject)
                 self.defaults.set(userToken.stringValue, forKey: "userToken")
                 self.defaults.set(true, forKey: "isLoggedIn")
-
-                self.goToList()
+                Switcher.updateRootVC()
             }
             
             
         }
     }
     
-    func goToList()  {
-        performSegue(withIdentifier: "fromsignupToList", sender: self)
-        
-    }
     
 
     //    MARK: Hide Keyboard

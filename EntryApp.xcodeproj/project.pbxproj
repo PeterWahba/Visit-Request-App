@@ -11,6 +11,8 @@
 		A3667F012231118100AA95AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F002231118100AA95AE /* LoginViewController.swift */; };
 		A3667F03223134E900AA95AE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F02223134E900AA95AE /* SignupViewController.swift */; };
 		A3667F0722314DEF00AA95AE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */; };
+		A388F461224375E700339252 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388F460224375E700339252 /* Switcher.swift */; };
+		A388F4652243778F00339252 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388F4642243778F00339252 /* TabBarVC.swift */; };
 		A3971B0622423EF500552C61 /* getlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3971B0522423EF500552C61 /* getlogo.png */; };
 		A3971B0C22424AC700552C61 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3971B0A22424AC700552C61 /* logo.png */; };
 		A3971B0D22424AC700552C61 /* logo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A3971B0B22424AC700552C61 /* logo_transparent.png */; };
@@ -30,6 +32,8 @@
 		A3667F002231118100AA95AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A3667F02223134E900AA95AE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = /Users/petermounir/Desktop/MAC/_get/_EntryApp/EntryApp/Controller/WelcomeViewController.swift; sourceTree = "<absolute>"; };
+		A388F460224375E700339252 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
+		A388F4642243778F00339252 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		A3971B0522423EF500552C61 /* getlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getlogo.png; sourceTree = "<group>"; };
 		A3971B0A22424AC700552C61 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../Downloads/LOGOS/logo.png; sourceTree = "<group>"; };
 		A3971B0B22424AC700552C61 /* logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_transparent.png; sourceTree = "<group>"; };
@@ -106,9 +110,11 @@
 		A3B2EEDD2227D32400DE79F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A388F4642243778F00339252 /* TabBarVC.swift */,
 				A3667F0622314DEF00AA95AE /* WelcomeViewController.swift */,
 				A3667F02223134E900AA95AE /* SignupViewController.swift */,
 				A3667F002231118100AA95AE /* LoginViewController.swift */,
+				A388F460224375E700339252 /* Switcher.swift */,
 				D304576B20D84DDA001DBE8E /* ChecklistViewController.swift */,
 				D363D79520D9BCB2006BB465 /* ItemDetailViewController.swift */,
 				D304576920D84DDA001DBE8E /* AppDelegate.swift */,
@@ -289,7 +295,9 @@
 				A3667F03223134E900AA95AE /* SignupViewController.swift in Sources */,
 				D304576C20D84DDA001DBE8E /* ChecklistViewController.swift in Sources */,
 				D363D79620D9BCB2006BB465 /* ItemDetailViewController.swift in Sources */,
+				A388F461224375E700339252 /* Switcher.swift in Sources */,
 				D3664B1320D97C280085AB15 /* ChecklistItem.swift in Sources */,
+				A388F4652243778F00339252 /* TabBarVC.swift in Sources */,
 				D304576A20D84DDA001DBE8E /* AppDelegate.swift in Sources */,
 				D363D79420D99C52006BB465 /* TodoList.swift in Sources */,
 			);
