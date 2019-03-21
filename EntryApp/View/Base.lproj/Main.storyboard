@@ -31,7 +31,7 @@
         <!--Profile-->
         <scene sceneID="ct1-sz-gmS">
             <objects>
-                <viewController id="WBy-iQ-hzr" sceneMemberID="viewController">
+                <viewController id="WBy-iQ-hzr" customClass="ProfileVC" customModule="EntryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="peW-eZ-vVd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,9 @@
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5450980392" green="0.58431372550000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="WBy-iQ-hzr" eventType="touchUpInside" id="ReY-qR-6Xh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,6 +88,10 @@
                         <viewLayoutGuide key="safeArea" id="4hz-kb-5M2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="user-male-50" selectedImage="user-male-50" id="et2-ge-6pJ"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="ckD-iV-0YI" id="v9I-3A-qI8"/>
+                        <outlet property="nameLabel" destination="hIN-PA-Cqg" id="0gL-Qn-7xN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvZ-VJ-jZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,11 +149,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Requests List" id="J02-ki-eaU">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="yYC-F8-tj8">
-                            <connections>
-                                <action selector="logoutBtn:" destination="ewa-4u-uF2" id="WnZ-ad-d4V"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YkR-0o-uiK">
                             <connections>
                                 <segue destination="fe3-Jy-YbM" kind="show" identifier="AddItemSegue" id="Kvv-mz-wJD"/>
@@ -232,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="5327.1999999999998" y="95.802098950524751"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--View Controller-->
         <scene sceneID="N22-lq-DQO">
             <objects>
-                <viewController storyboardIdentifier="welcomevc" id="1oc-fK-zEg" customClass="WelcomeViewController" customModule="EntryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1oc-fK-zEg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7Y-yg-iGB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,10 +566,10 @@
             </objects>
             <point key="canvasLocation" x="1442" y="533"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="6Yf-c6-g6v">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iEs-MM-Smj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="welcomevc" automaticallyAdjustsScrollViewInsets="NO" id="iEs-MM-Smj" customClass="WelcomeVC" customModule="EntryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HRZ-Sl-EHL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

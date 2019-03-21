@@ -20,18 +20,7 @@ class ChecklistViewController: UITableViewController {
 
   var todoList: TodoList
   
-    @IBAction func logoutBtn(_ sender: Any) {
-        do {
-            defaults.set(false, forKey: "isLoggedIn")
-            defaults.set(nil, forKey: "userToken")
 
-            Switcher.updateRootVC()
-            
-        }
-        catch {
-            print("error: there was a problem logging out")
-        }
-    }
     @IBAction func addItem(_ sender: Any) {
     
     let newRowIndex = todoList.todos.count

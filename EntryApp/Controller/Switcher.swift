@@ -22,7 +22,7 @@ class Switcher {
         if(isLoggedIn == true){
             rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarvc") as! TabBarVC
         }else{
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcomevc") as! WelcomeViewController
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcomevc") as! WelcomeVC
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
